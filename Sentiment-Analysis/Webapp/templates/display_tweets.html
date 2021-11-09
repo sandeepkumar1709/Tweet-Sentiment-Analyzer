@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<!-- 
+Template Name: dashgrin - Responsive Bootstrap 4 Admin Dashboard Template
+Author: Hencework
+
+License: You must have a valid license purchased only from themeforest to legally use the template for your project.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Display tweets</title>
+    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+	
+	<style>
+	   #details {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#details td, #details th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#details tr:nth-child(even){background-color: #f2f2f2;}
+
+#details tr:hover {background-color: #ddd;}
+
+#details th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #22af47;
+  color: white;
+}
+    
+.my-custom-scrollbar {
+    position: relative;
+    height: 300px;
+    width: 480px;
+    overflow: auto;
+    }
+.table-wrapper-scroll-y {
+    display: block;
+    }
+</style>
+	
+	
+</head>
+
+<body>
+    <!-- HK Wrapper -->
+	<div class="hk-wrapper">
+
+        <!-- Main Content -->
+        <div class="hk-pg-wrapper hk-auth-wrapper">
+            <header class="d-flex justify-content-end align-items-center">
+              
+            </header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12 pa-0">
+                        <div class="auth-form-wrap pt-xl-0 pt-70" style="width: 260%;">
+                            <div class="auth-form w-xl-35 w-lg-65 w-sm-85 w-100 card pa-25 shadow-lg" style="background-color: white;position: relative;left:-31%;;">
+                                <!-- <a class="auth-brand text-center d-block mb-20" href="#">
+                                    <img class="brand-img" src="{{url_for('static', filename='crimereport.png')}}" alt="brand" style="position: relative;left: 30%;">
+                                </a> -->
+                                
+                                  <h4 style="text-align:center; position: relative;">Sample tweets from twitter</h4> 
+      
+	  
+	  <!-- <div class="inner1 table-wrapper-scroll-y my-custom-scrollbar">	 -->
+        <div class="inner"  style="margin-top:2%;">
+        <!-- <table border="1"  id="details" style="position: relative;top: 11px;"> -->
+            <table border="1" id="details" class="table-wrapper-scroll-y my-custom-scrollbar">
+            <tr>
+                
+                <!-- <th>contact</th> -->
+                <th>Sno</th>
+                <th>Tweet</th>
+                
+                <th>location </th>
+            </tr>
+            {%for index,row in tweet.iterrows()%}
+            
+            <tr>
+                <td>{{index}}</td>
+                <td>{{row['text']}}</td>
+                <td>{{row['location']}}</td>
+                
+            </tr>
+            {% endfor %}
+           
+            
+            <form action = "/display_final" method="POST" class="form-group">
+                
+                
+				<tr> <td colspan="4" align="center"><button type="submit" style="background-color: #22af47; width: 100px; height: 28px;
+            border: none;  border-radius: 13px;color:white;">Proceed</button> </td> 
+                </tr>
+             
+             </form>   
+               
+        </table>
+	
+	</div>
+
+
+								
+								</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /HK Wrapper -->
+    
+    
+    
+</body>
+
+</html>

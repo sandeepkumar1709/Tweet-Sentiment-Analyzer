@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    
+    <title>Analysis of twitter data</title>
+    
+    
+
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+	
+	 <style>
+		    
+			.round
+    {
+        border-radius: 25px;
+        border: 2px solid #88aaac;
+        padding: 20px; 
+        width: 200px;
+        height: 15px;    
+        
+    }
+    h1{
+        text-align: center;
+		position: relative;
+        top: 15%;
+    }
+    .mybtn{
+        background: #88aaac;
+       }
+	   
+	   .user{
+	       margin-top: 9%;
+	   }
+	   
+	   button{
+	     margin-top: 2%;
+	   }
+	    
+	  button p{
+	     position: relative;
+         top: -6px;
+	  }
+			
+		</style>
+	 
+</head>
+
+<body>
+    <!-- HK Wrapper -->
+	<div class="hk-wrapper">
+
+        <!-- Main Content -->
+        <div class="hk-pg-wrapper hk-auth-wrapper">
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12 pa-0">
+                        <div class="auth-form-wrap pt-xl-0 pt-70">
+                            <div class="auth-form w-xl-35 w-lg-65 w-sm-85 w-100 card pa-25 shadow-lg" style="background-color:white;">
+                                
+                                
+
+                           
+
+<div class="user" align="center" height = 2000px>
+    <form action = "/login" method="POST" class="form-group">
+        <input type="text" name = "user" class="round" placeholder="Username" required><br/><br/>
+        <input type="password" name = "password" class="round" placeholder ="Password" required><br/>
+        <button type="submit" class="round mybtn"><p>Login</p></button>
+    </form>
+</div>
+</body>
+	
+	</div>
+								
+								
+								
+								</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /HK Wrapper -->
+    
+    
+    
+</body>
+
+</html>

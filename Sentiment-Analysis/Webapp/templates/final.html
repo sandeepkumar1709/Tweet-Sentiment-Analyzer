@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Report</title>
+        <style>
+            * {
+                box-sizing: border-box;
+              }
+              
+              .column {
+                margin-top: 100px;
+                float: left;
+                width: 33.33%;
+                padding: 5px;
+              }
+              
+              /* Clearfix (clear floats) */
+              .row::after {
+                content: "";
+                margin-top: 100px;
+                clear: both;
+                display: table;
+              }
+              .m{
+                margin-bottom: 100px;
+                margin: auto;
+                width: 50%;
+                border: 3px solid green;
+                
+                }
+        </style>
+    </head>
+    <body>
+
+        <div class="m">
+            <h2>Bar Graph</h2>
+            <img src = "{{url_for('static', filename='new_plot0.png')}}">
+            <!-- <img src= "static/new_plot0.png" alt="Chart" > -->
+
+        </div>
+        
+        <div class="row" >
+            <div class="column">
+                <h2>Pre-Event Polarity</h2>
+              <img src="{{url_for('static', filename='new_plot10.png')}}" alt="Pre" style="width:100%">
+            </div>
+            <div class="column">
+                <h2>Current-Event Polarity</h2>
+              <img src="{{url_for('static', filename='new_plot20.png')}}" alt="Current" style="width:100%">
+            </div>
+            <div class="column">
+                <h2>Post-Event Polarity</h2>
+              <img src="{{url_for('static', filename='new_plot30.png')}}" alt="Mountains" style="width:100%">
+            </div>
+          </div>    
+
+
+        
+
+        
+    </body>
+</html>
