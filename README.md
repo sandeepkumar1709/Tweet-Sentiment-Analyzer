@@ -42,4 +42,4 @@ In summary, the Tweet Sentiment Analyzer combines data cleaning expertise, direc
 
 
 
-
+Please refer to the project publication here: https://www.ijrar.org/papers/IJRAR23C1279.pdf
